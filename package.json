@@ -1,6 +1,6 @@
 {
   "name": "@odyssoft/react-facebook-login",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React facebook login button with types",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
@@ -19,12 +19,13 @@
     "url": "git+https://github.com/odyssoft/react-facebook-login.git"
   },
   "keywords": [
-    "React",
-    "Facebook",
-    "Login",
-    "Auth",
-    "TypeScript",
-    "JavaScript"
+    "react",
+    "facebook",
+    "login",
+    "auth",
+    "typescript",
+    "facebook-login",
+    "react-facebook-login"
   ],
   "author": "Sean Hewitson",
   "license": "ISC",

@@ -3,7 +3,11 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import FacebookLogin from './facebook-login'
 
-import { FacebookLoginRenderProps } from './'
+import {
+  FacebookLoginRenderProps,
+  FacebookFailureResponse,
+  FacebookLoginInfo,
+} from './'
 
 export default {
   title: 'Facebook Login Button',
@@ -16,7 +20,7 @@ const Template: ComponentStory<typeof FacebookLogin> = (args: any) => (
     onClick={(e: any) => {
       console.log({ clicked: e })
     }}
-    callback={(d: any) => {
+    callback={(d: FacebookLoginInfo | FacebookFailureResponse) => {
       console.log({ d })
     }}
     {...args}
@@ -26,18 +30,14 @@ const Template: ComponentStory<typeof FacebookLogin> = (args: any) => (
 //  @ts-ignore
 export const _FacebookLogin = () => <Template />
 
-export const _FacebookLoginRender = () => (
-  //  @ts-ignore
-  <Template
-    render={({
-      isDisabled,
-      isLoading,
-      isSdkLoaded,
-      ...rest
-    }: FacebookLoginRenderProps) => (
-      <div style={{ background: 'red' }} {...rest}>
-        Click to login
-      </div>
-    )}
-  />
-)
+export const _FacebookLoginRender = () => {
+  const TestComponent = (props: FacebookLoginRenderProps) => (
+    <div style={{ background: 'red' }} {...props}>
+      Click to login
+    </div>
+  )
+  return (
+    //  @ts-ignore
+    <Template render={TestComponent} />
+  )
+}

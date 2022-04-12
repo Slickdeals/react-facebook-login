@@ -2,8 +2,8 @@ import { Button, ButtonProps } from '@nextui-org/react'
 import React from 'react'
 import {
   FacebookLoginProps,
-  ReactFacebookFailureResponse,
-  ReactFacebookLoginInfo,
+  FacebookFailureResponse,
+  FacebookLoginInfo,
 } from '../'
 
 const decodeParams = (param: string, key: string) =>
@@ -100,7 +100,7 @@ const FacebookLogin = ({
   }
 
   const responseApi = (
-    authResponse: ReactFacebookLoginInfo | ReactFacebookFailureResponse
+    authResponse: FacebookLoginInfo | FacebookFailureResponse
   ) =>
     window.FB.api(
       '/me',

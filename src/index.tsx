@@ -2,17 +2,17 @@ export * from './facebook-login'
 
 export interface FacebookLoginProps {
   appId: string
-  callback(
-    userInfo: ReactFacebookLoginInfo | ReactFacebookFailureResponse
-  ): void
+  callback(userInfo: FacebookResponse): void
   fields?: string
   isDisabled?: boolean
   language?: string
   onClick?: Function
-  onFailure?(response: ReactFacebookFailureResponse): void
+  onFailure?(response: FacebookFailureResponse): void
   render?(props: any): JSX.Element
   scope?: string
 }
+
+export type FacebookResponse = FacebookLoginInfo | FacebookFailureResponse
 
 export interface FacebookLoginRenderProps {
   onClick: any
@@ -21,7 +21,7 @@ export interface FacebookLoginRenderProps {
   isSdkLoaded: boolean
 }
 
-export interface ReactFacebookFailureResponse {
+export interface FacebookFailureResponse {
   status?: string | undefined
 }
 
@@ -34,7 +34,7 @@ export interface FacebookPicture {
   }
 }
 
-export interface ReactFacebookLoginInfo {
+export interface FacebookLoginInfo {
   id: string
   userID: string
   accessToken: string
@@ -43,7 +43,7 @@ export interface ReactFacebookLoginInfo {
   picture?: FacebookPicture | undefined
 }
 
-export interface ReactFacebookLoginState {
+export interface FacebookLoginState {
   isSdkLoaded?: boolean | undefined
   isLoading?: boolean | undefined
 }
