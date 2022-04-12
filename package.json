@@ -1,0 +1,79 @@
+{
+  "name": "@odyssoft/react-facebook-login",
+  "version": "1.0.1",
+  "description": "React facebook login button with types",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "jsnext:main": "lib/index.es.js",
+  "scripts": {
+    "lint": "standard",
+    "build": "rm -rf ./lib && tsc",
+    "test": "jest",
+    "test-with-coverage": "jest --coverage",
+    "storybook": "start-storybook -p 6006",
+    "format": "prettier-standard --format",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odyssoft/react-facebook-login.git"
+  },
+  "keywords": [
+    "React",
+    "Facebook",
+    "Login",
+    "Auth",
+    "TypeScript",
+    "JavaScript"
+  ],
+  "author": "Sean Hewitson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/odyssoft/react-facebook-login/issues"
+  },
+  "homepage": "https://github.com/odyssoft/react-facebook-login#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@storybook/addon-a11y": "^6.3.9",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/addon-storysource": "^6.3.9",
+    "@storybook/builder-webpack5": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/react": "^6.4.9",
+    "@storybook/testing-library": "^0.0.9",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.0.0",
+    "@types/jest": "^27.4.1",
+    "@types/react": "^18.0.1",
+    "@types/react-dom": "^18.0.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.2.4",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "eslint-plugin-storybook": "^0.5.8",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2",
+    "rollup": "^2.70.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "standard": "^16.0.4",
+    "standard-prettier": "^1.0.1",
+    "storybook-dark-mode": "^1.0.9",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "peerDependencies": {
+    "@nextui-org/react": "^1.0.8-beta.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}
