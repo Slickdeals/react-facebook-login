@@ -20,8 +20,8 @@ const Template: ComponentStory<typeof FacebookLogin> = (args: any) => (
     onClick={(e: any) => {
       console.log({ clicked: e })
     }}
-    callback={(d: FacebookLoginInfo | FacebookFailureResponse) => {
-      console.log({ d })
+    callback={(response: FacebookLoginInfo | FacebookFailureResponse) => {
+      console.log({ response })
     }}
     {...args}
   />

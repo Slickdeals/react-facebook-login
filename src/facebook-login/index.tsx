@@ -55,7 +55,6 @@ const isRedirected = (params = window.location.search) =>
   (decodeParams(params, 'code') || decodeParams(params, 'granted_scopes'))
 
 const loadSdk = (lang: string) => {
-  console.log(' loading sdk ')
   if (document.getElementById('facebook-jssdk')) {
     return
   }
@@ -66,7 +65,6 @@ const loadSdk = (lang: string) => {
   source.id = 'facebook-jssdk'
   source.src = `https://connect.facebook.net/${lang}/sdk.js`
   clone.parentNode.insertBefore(source, clone)
-  console.log('done')
 }
 
 const FacebookLogin = ({
@@ -84,7 +82,6 @@ const FacebookLogin = ({
   const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
   const initFB = () => {
-    console.log('called init')
     window.fbAsyncInit = () => {
       window.FB.init({
         version: 'v3.1',
@@ -125,11 +122,7 @@ const FacebookLogin = ({
   }
 
   const handleClick = (e: any) => {
-    console.log({ clicked: e })
     if (!isSdkLoaded || isLoading || isDisabled) {
-      console.log({ isSdkLoaded })
-      console.log({ isLoading })
-      console.log({ isDisabled: !!isDisabled })
       return
     }
     setIsLoading(true)

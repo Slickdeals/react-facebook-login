@@ -1,6 +1,6 @@
 {
   "name": "@odyssoft/react-facebook-login",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "React facebook login button with types",
   "main": "lib/index.js",
   "module": "lib/index.es.js",

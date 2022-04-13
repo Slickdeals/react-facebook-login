@@ -1,4 +1,7 @@
+import FacebookLogin from './facebook-login'
 export * from './facebook-login'
+
+export default FacebookLogin
 
 export interface FacebookLoginProps {
   appId: string
